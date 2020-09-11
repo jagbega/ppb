@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{/*corpo do sistema*/
+    font-family: Arial;
+    background-image: url("../images/RHDig.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    /*background-attachment: initial;*/
+    background-size: 100%;
+}
+/*inicio css menu*/
+a{/*links do menu*/
+    text-decoration: none;
+    color: black;
+}
+
+ul{/*contém os links do menu*/
+    list-style: none;
+    top: 70px;
+    position: absolute;
+    width: 100%;
+}
+
+label img{/*tamanho da imagem do menu*/
+    width: 40px;
+}
+
+input[type="checkbox"]{/*deixa o checkbox escondido*/
+    display: none;
+}
+
+nav{/*aba que contém a área de navegação do menu*/
+    background: rgba( 16, 16, 16, .5);
+    width: 350px;
+    height: 100%;
+    left: -350px;
+    position: absolute;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    top: 0%;
+}
+
+input[type="checkbox"]:checked ~ nav {/*input checkbox para se estiver verdadeiro exibe a aba de menu se falso esconde*/
+    transform: translate(350px);
+    -webkit-transform: translate(350px);
+    -moz-transform: translate(350px);
+    -ms-transform: translate(350px);
+    -o-transform: translate(350px);
+}
+
+a{/*css dos links do menu*/
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{/*evento para quando passar o cursor em cima dos link do menu alterar a cor dos links*/
+    background-color:  rgb(176, 224, 230);
+    color: black;
+    text-decoration: none;
+}
+
+label{/*label que contém a imagem do menu*/
+    padding: 15px;
+    position: absolute;
+    z-index: 1;/*faz com que o elemento fique na frente do outro*/
+}
+/*fim css para menu*/
+
+/*-----------------------------------------------------------------*/
+
+/*media para tablet de tamanho minimo de 450px a 800px*/
+@media (min-width: 450px) and (max-width: 800px){
+    /*Colocar eventos a acontecer*/
+    body{/*corpo do sistema*/
+        font-family: Arial;
+        background-image: url("../images/RHDig.jpg");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: cover;
+        /*background-attachment: initial;
+        background-size: 100%;*/
+    }
+    nav{
+        width: 250px;
+    }
+    nav li.active a{/*inicia com link selecionado
+        /*color: red;*/
+    }
+    nav a{
+        display: block;
+        padding: 10px 25px;
+        color: white;
+        font: bold;
+        /*font-size: 20px;*/
+    }
+}
+
+/*-----------------------------------------------------------------*/
+
+/*media para mobile*/
+@media (max-width: 450px){
+    /*Colocar eventos a acontecer*/
+    body{/*corpo do sistema*/
+        font-family: Arial;
+        background-image: url("../images/RHDig.jpg");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: cover;
+        /*background-attachment: initial;
+        background-size: 100%;*/
+    }
+    nav{
+        width: 250px;
+    }
+    nav li.active a{/*inicia com link selecionado
+        /*color: red;*/
+    }
+    nav a{
+        display: block;
+        padding: 10px 25px;
+        color: white;
+        font: bold;
+        /*font-size: 20px;*/
+    }
+}
